@@ -1,0 +1,15 @@
+{
+  "name": "trickster",
+  "version": "1.0.0",
+  "description": "Simple mock framework",
+  "main": "trickster.js",
+  "scripts": {
+    "test": "mocha tests"
+  },
+  "keywords": [
+    "mock",
+    "tests"
+  ],
+  "author": "Erick Zanardo",
+  "license": "MIT"
+}
