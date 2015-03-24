@@ -28,6 +28,10 @@ StubBuilder.prototype.andReturn = function(value) {
   }
 };
 
+StubBuilder.prototype.andExecute = function(func) {
+  this.mock[this.name] = func;
+};
+
 // Attribute builder
 function AttrBuilder(mock, name) {
   this.mock = mock;

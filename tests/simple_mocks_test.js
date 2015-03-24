@@ -4,8 +4,12 @@ var trickster = require('../trickster.js');
 describe('Plain mocks', function() {
     var mock = trickster.mock();
     describe('Functions', function() {
-        mock.calls('myFunction').andReturn('Some Value!');
-        it('Function must be mocked', function() {
+        it('Function must be assembled and returing correctly', function() {
+            mock.calls('myFunction').andReturn('Some Value!');
+            assert.equal('Some Value!', mock.myFunction());
+        });
+        it('Function must be executed as mocked', function() {
+            mock.calls('myFunction').andExecute(function() { return 'Some Value!' });
             assert.equal('Some Value!', mock.myFunction());
         });
     });
