@@ -1,3 +1,5 @@
+var proxyquire = require('proxyquire');
+
 // Mock
 function Mock(obj) {
   // Comping object
@@ -53,5 +55,9 @@ Trickster.prototype.mock = function() {
 Trickster.prototype.trick = function(obj) {
   return new Mock(obj);
 }
+
+Trickster.prototype.trickRequire = function(path, stubs) {
+    return proxyquire(path, stubs);
+};
 
 module.exports = new Trickster();

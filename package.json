@@ -11,5 +11,8 @@
     "tests"
   ],
   "author": "Erick Zanardo",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "proxyquire": "^1.4.0"
+  }
 }
